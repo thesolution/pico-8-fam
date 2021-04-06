@@ -4,7 +4,7 @@ This is a family repo where I'm documenting and publishing work my kids are doin
 Just as an example here's flattversa's first cart that uses sprites http://pico-8.4d3d3d3.net/flattversa/undertool.html
 
 # learning pico-8
-We are going through Krystian Majewski's series of tutorials called [pico-8 hero](https://www.youtube.com/playlist?list=PLYND9uft5u_1YCkmXiMrPU7tiBG3hIKAZ) on YouTube and it seems to be the right pace for us.  My kids have all played with Scratch for years so the concepts of loops and functions are not completely foreign, but Krystian has a great approach where he goes in the right amount of detail when covering a topic and if he doesn't explain fully he points out that it will be covered later. One example is user defined function arguments which weren't covered in `Breakout #2 - Functions and Variables`.
+We are going through Krystian Majewski's series of tutorials called [pico-8 hero](https://www.youtube.com/playlist?list=PLYND9uft5u_1YCkmXiMrPU7tiBG3hIKAZ) on YouTube and it seems to be the right pace for us.  My kids have all played with Scratch for years so the concepts of loops and functions are not completely foreign, but Krystian has a great approach where he goes into detail when covering a topic and if he doesn't explain fully he points out that it will be covered later. One example is user defined function arguments which weren't covered in `Breakout #2 - Functions and Variables`.
 
 We're constantly pausing to take time to play with whatever thing we just learned and several times, I have them explore a topic that is immediately covered when we resume the video.
 
@@ -48,3 +48,26 @@ I would have killed for the ability to do this on my used 386SX 33mhz in the 199
 # todo
  - script exporting changed carts (can thumbnail capture be automated?)
  - script a landing page so the kids don't have to remember the exact name of the cart.
+http://pico-8.4d3d3d3.net/flattversa/undertool.html
+
+
+To generate stand-alone executables for Windows, Linux (64-bit), Mac and Raspberry Pi:
+
+		> EXPORT FOO.BIN
+
+		By default, the cartridge label is used as an icon with no transparency.
+		To specificy an icon from the sprite sheet, use -i and optionally -s and/or -c
+		to control the size and transparency.
+
+			-I N  Icon index N with a default transparent colour of 0 (black).
+			-S N  Size NxN sprites. Size 3 would be produce a 24x24 icon.
+			-C N  Treat colour N as transparent. Use 16 for no transparency.
+
+		For example, to use a 2x2 sprite starting at index 32 in the spritesheet,
+		using colour 12 as transparent:
+
+			> EXPORT -I 32 -S 2 -C 12 FOO.BIN
+
+		To include an extra file in the output folders and archives, use the -E switch:
+
+			> EXPORT -E README.TXT FOO.BIN
